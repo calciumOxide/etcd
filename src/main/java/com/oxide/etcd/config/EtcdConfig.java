@@ -34,11 +34,11 @@ public class EtcdConfig {
     /**
      * 是否开始ETCD
      */
-    private boolean enabled = true;
+    private Boolean enabled = true;
 
     /**
      * 是否开启认证登录
      */
-    private boolean isAuth = false;
+    private Boolean auth = false;
 
 }

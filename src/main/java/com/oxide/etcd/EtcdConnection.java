@@ -53,8 +53,8 @@ public class EtcdConnection {
 
     public static void connect(EtcdConfig etcdConfig) {
 
-        if (etcdConfig.isEnabled()) {
-            if (etcdConfig.isAuth()) {
+        if (etcdConfig.getEnabled()) {
+            if (etcdConfig.getAuth()) {
                 client = Client.builder().user(ByteSequence.fromString(etcdConfig.getUsername()))
                         .password(ByteSequence.fromString(etcdConfig.getPassword()))
                         .endpoints(etcdConfig.getUrl().split(",")).build();
